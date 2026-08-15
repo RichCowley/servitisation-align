@@ -204,6 +204,54 @@ h1 {
 
 }
 
+.align-profile {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.align-profile > div {
+    text-align: center;
+}
+
+.align-profile > div:nth-child(odd) {
+    padding: 22px 12px;
+    background: #f7f9fb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.align-profile > div:nth-child(even) {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.align-profile strong {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.align-profile span {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .align-profile {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .align-profile > div:nth-child(even) {
+        transform: rotate(90deg);
+    }
+}
+
 </style>
 </head>
 
