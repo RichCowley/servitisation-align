@@ -514,7 +514,7 @@ const alignmentDirection = results.belief - results.readiness;
 let profileInterpretationTitle = "";
 let profileInterpretationText = "";
 
-if (alignmentGap >= 40 && alignmentDirection >= 20) {
+if (alignmentGap >= 40 && alignmentDirection >= 20 && !(results.belief >= 70 && results.commitment <= results.belief - 25)) {
     profileInterpretationTitle = "A significant alignment drop";
 
     profileInterpretationText =
