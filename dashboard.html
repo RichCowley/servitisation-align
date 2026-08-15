@@ -424,7 +424,14 @@ for (const dimension in dimensions) {
         lowestScore = dimensions[dimension];
     }
 }
+const highestScore = Math.max(
+    results.belief,
+    results.understanding,
+    results.commitment,
+    results.readiness
+);
 
+const alignmentGap = highestScore - lowestScore;
 
 let diagnosticTitle = "";
 let diagnosticText = "";
@@ -432,8 +439,27 @@ let meaningText = "";
 let opportunityText = "";
 let actions = [];
 
+if (alignmentGap >= 40) {
 
-if (
+    diagnosticTitle = "Leadership Alignment Gap";
+
+    diagnosticText =
+        "There is a significant spread between your strongest and weakest ALIGN dimensions. This suggests leadership support is uneven and may create friction as servitisation moves from strategy into execution.";
+
+    meaningText =
+        "The organisation does not simply have one weak area; it has a material imbalance between where leadership is strongest and where confidence or readiness falls away.";
+
+    opportunityText =
+        "Close the largest gap before accelerating the servitisation agenda.";
+
+    actions = [
+        "Identify which dimension is creating the greatest execution risk.",
+        "Align leadership on the specific decisions required to close that gap.",
+        "Reassess after targeted action to confirm the gap is narrowing."
+    ];
+
+}
+else if (
     results.belief >= 70 &&
     results.commitment <= results.belief - 25
 ) {
