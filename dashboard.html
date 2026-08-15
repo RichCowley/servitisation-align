@@ -510,24 +510,28 @@ const highestScore = Math.max(
 );
 
 const alignmentGap = highestScore - lowestScore;
-
+const alignmentDirection = results.belief - results.readiness;
 let profileInterpretationTitle = "";
 let profileInterpretationText = "";
 
-if (alignmentGap >= 40) {
+if (alignmentGap >= 40 && alignmentDirection >= 20) {
     profileInterpretationTitle = "A significant alignment drop";
 
     profileInterpretationText =
         "Your ALIGN profile shows a substantial decline from strategic belief through to organisational readiness. " +
         "This indicates that leadership support for servitisation is not yet translating consistently into commitment and execution capability.";
 }
-else if (alignmentGap >= 20) {
+else if (alignmentGap >= 20 && alignmentDirection >= 20) {
     profileInterpretationTitle = "An important alignment gap";
 
     profileInterpretationText =
         "Your ALIGN profile shows that support for servitisation is stronger in some dimensions than others. " +
         "Closing these gaps will help convert strategic intent into stronger organisational execution.";
 }
+else if (alignmentDirection <= -20) {
+        profileInterpretationTitle = "Alignment strengthens toward execution";
+            profileInterpretationText = "Your ALIGN profile strengthens as it moves toward organisational readiness. This suggests that execution capability and commitment are stronger than the initial level of strategic belief might indicate.";}
+        
 else {
     profileInterpretationTitle = "A relatively aligned leadership profile";
 
