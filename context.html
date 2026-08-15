@@ -171,50 +171,6 @@ of your organisation and its servitisation journey.
 
 <form id="contextForm">
 
-<div class="form-group">
-
-<label>
-Your role
-<span class="help">What best describes your position?</span>
-</label>
-
-<select id="role" required>
-
-<option value="">Select your role</option>
-<option>CEO / Managing Director</option>
-<option>Executive Leadership</option>
-<option>Service Leader</option>
-<option>Commercial / Sales Leader</option>
-<option>Operations Leader</option>
-<option>Finance Leader</option>
-<option>HR / People Leader</option>
-<option>Other</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Organisation size
-<span class="help">Approximately how many employees are in the organisation?</span>
-</label>
-
-<select id="size" required>
-
-<option value="">Select organisation size</option>
-<option>1–49</option>
-<option>50–249</option>
-<option>250–999</option>
-<option>1,000–4,999</option>
-<option>5,000+</option>
-
-</select>
-
-</div>
-
 
 <div class="form-group">
 
@@ -295,8 +251,6 @@ document.getElementById("contextForm").addEventListener("submit", function(event
     event.preventDefault();
 
     const context = {
-        role: document.getElementById("role").value,
-        size: document.getElementById("size").value,
         serviceRevenue: document.getElementById("serviceRevenue").value,
         ambition: document.getElementById("ambition").value,
         leadershipSize: document.getElementById("leadershipSize").value
