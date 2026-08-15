@@ -352,6 +352,16 @@ Your diagnostic insight will appear here.
         <div>→</div>
         <div><strong>READINESS</strong> <span id="profileReadiness">0</span></div>
     </div>
+
+    <div class="profile-interpretation">
+    <h3 id="profileInterpretationTitle">
+        ALIGN Profile Interpretation
+    </h3>
+
+    <p id="profileInterpretationText">
+        We are interpreting the relationship between your four ALIGN dimensions.
+    </p>
+</div>
 </section>
 
 
@@ -501,6 +511,31 @@ const highestScore = Math.max(
 
 const alignmentGap = highestScore - lowestScore;
 
+let profileInterpretationTitle = "";
+let profileInterpretationText = "";
+
+if (alignmentGap >= 40) {
+    profileInterpretationTitle = "A significant alignment drop";
+
+    profileInterpretationText =
+        "Your ALIGN profile shows a substantial decline from strategic belief through to organisational readiness. " +
+        "This indicates that leadership support for servitisation is not yet translating consistently into commitment and execution capability.";
+}
+else if (alignmentGap >= 20) {
+    profileInterpretationTitle = "An important alignment gap";
+
+    profileInterpretationText =
+        "Your ALIGN profile shows that support for servitisation is stronger in some dimensions than others. " +
+        "Closing these gaps will help convert strategic intent into stronger organisational execution.";
+}
+else {
+    profileInterpretationTitle = "A relatively aligned leadership profile";
+
+    profileInterpretationText =
+        "Your four ALIGN dimensions are relatively close together. " +
+        "This suggests that belief, understanding, commitment and organisational readiness are developing at a broadly consistent level.";
+}
+
 let diagnosticTitle = "";
 let diagnosticText = "";
 let meaningText = "";
@@ -631,7 +666,8 @@ else {
     ];
 
 }
-
+document.getElementById("profileInterpretationTitle").textContent = profileInterpretationTitle;
+document.getElementById("profileInterpretationText").textContent = profileInterpretationText;
 document.getElementById("diagnosticTitle").textContent =
     diagnosticTitle;
 
