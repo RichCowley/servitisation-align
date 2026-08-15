@@ -545,8 +545,7 @@ let diagnosticText = "";
 let meaningText = "";
 let opportunityText = "";
 let actions = [];
-
-if (alignmentGap >= 40 && alignmentDirection >= 20) {
+if (alignmentGap >= 40 && alignmentDirection >= 20 && !(results.belief >= 70 && results.commitment <= results.belief - 25)) {
 
     diagnosticTitle = "Leadership Alignment Gap";
 
