@@ -289,6 +289,23 @@ Your diagnostic insight will appear here.
 
 </section>
 
+<section class="panel">
+    <h2>ALIGN Profile</h2>
+    <p>
+        Your leadership alignment journey from strategic belief through to organisational readiness.
+    </p>
+
+    <div class="align-profile">
+        <div><strong>BELIEF</strong> <span id="profileBelief">0</span></div>
+        <div>→</div>
+        <div><strong>UNDERSTANDING</strong> <span id="profileUnderstanding">0</span></div>
+        <div>→</div>
+        <div><strong>COMMITMENT</strong> <span id="profileCommitment">0</span></div>
+        <div>→</div>
+        <div><strong>READINESS</strong> <span id="profileReadiness">0</span></div>
+    </div>
+</section>
+
 
 <section class="panel alert">
 
@@ -370,7 +387,10 @@ document.getElementById("beliefScore").textContent = results.belief;
 document.getElementById("understandingScore").textContent = results.understanding;
 document.getElementById("commitmentScore").textContent = results.commitment;
 document.getElementById("readinessScore").textContent = results.readiness;
-
+document.getElementById("profileBelief").textContent = results.belief;
+document.getElementById("profileUnderstanding").textContent = results.understanding;
+document.getElementById("profileCommitment").textContent = results.commitment;
+document.getElementById("profileReadiness").textContent = results.readiness;
 if (organisation && organisation.company) {
     document.getElementById("pageTitle").textContent =
         organisation.company + " ALIGN Results";
