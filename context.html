@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Organisation Context | Servitisation ALIGN</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172231;
+    background: #ffffff;
+}
+
+header {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.brand strong {
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 15px;
+}
+
+main {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 0 30px;
+}
+
+.step {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 46px;
+    line-height: 1.1;
+    margin: 0 0 20px;
+}
+
+.intro {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #536273;
+    max-width: 760px;
+    margin-bottom: 50px;
+}
+
+.form-group {
+    margin-bottom: 32px;
+}
+
+label {
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.help {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #cfd5dc;
+    border-radius: 4px;
+    background: white;
+}
+
+select:focus,
+input:focus {
+    outline: 2px solid #172231;
+    outline-offset: 1px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 18px 28px;
+    background: #111c2c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #263548;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 22px;
+    }
+
+    .tagline {
+        display: none;
+    }
+
+    main {
+        margin-top: 45px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+<strong>SERVITISATION</strong>&nbsp;&nbsp; ALIGN
+</div>
+
+<div class="tagline">
+Leadership Alignment for Service Growth
+</div>
+
+</header>
+
+<main>
+
+<div class="step">
+ORGANISATION CONTEXT
+</div>
+
+<h1>
+Tell us a little about your organisation.
+</h1>
+
+<p class="intro">
+This helps us interpret your leadership alignment results in the context
+of your organisation and its servitisation journey.
+</p>
+
+<form id="contextForm">
+
+<div class="form-group">
+
+<label>
+Your role
+<span class="help">What best describes your position?</span>
+</label>
+
+<select id="role" required>
+
+<option value="">Select your role</option>
+<option>CEO / Managing Director</option>
+<option>Executive Leadership</option>
+<option>Service Leader</option>
+<option>Commercial / Sales Leader</option>
+<option>Operations Leader</option>
+<option>Finance Leader</option>
+<option>HR / People Leader</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Organisation size
+<span class="help">Approximately how many employees are in the organisation?</span>
+</label>
+
+<select id="size" required>
+
+<option value="">Select organisation size</option>
+<option>1–49</option>
+<option>50–249</option>
+<option>250–999</option>
+<option>1,000–4,999</option>
+<option>5,000+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Current service revenue
+<span class="help">Approximately what percentage of total revenue currently comes from services?</span>
+</label>
+
+<select id="serviceRevenue" required>
+
+<option value="">Select service revenue</option>
+<option>0–5%</option>
+<option>6–10%</option>
+<option>11–20%</option>
+<option>21–40%</option>
+<option>41–60%</option>
+<option>More than 60%</option>
+<option>Not sure</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Servitisation ambition
+<span class="help">How important is service growth to the organisation's strategy?</span>
+</label>
+
+<select id="ambition" required>
+
+<option value="">Select strategic importance</option>
+<option>Not currently a strategic priority</option>
+<option>Being explored</option>
+<option>An emerging strategic priority</option>
+<option>A major strategic priority</option>
+<option>Central to our future business model</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Leadership team size
+<span class="help">Approximately how many leaders will participate in the assessment?</span>
+</label>
+
+<select id="leadershipSize" required>
+
+<option value="">Select leadership team size</option>
+<option>1–5</option>
+<option>6–10</option>
+<option>11–20</option>
+<option>21+</option>
+
+</select>
+
+</div>
+
+
+<button type="submit">
+Continue to Leadership Assessment →
+</button>
+
+</form>
+
+</main>
+
+<script>
+
+document.getElementById("contextForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const context = {
+        role: document.getElementById("role").value,
+        size: document.getElementById("size").value,
+        serviceRevenue: document.getElementById("serviceRevenue").value,
+        ambition: document.getElementById("ambition").value,
+        leadershipSize: document.getElementById("leadershipSize").value
+    };
+
+    localStorage.setItem("servitisationAlignContext", JSON.stringify(context));
+
+    window.location.href = "assessment.html";
+
+});
+
+</script>
+
+</body>
+</html>

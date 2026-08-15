@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ALIGN Results | Servitisation ALIGN</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #172231;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 28px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.brand strong {
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 15px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 55px auto;
+    padding: 0 30px 100px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 44px;
+    margin: 0 0 12px;
+}
+
+.subtext {
+    font-size: 18px;
+    color: #607080;
+    margin-bottom: 40px;
+}
+
+.hero-score {
+    background: #111c2c;
+    color: white;
+    border-radius: 8px;
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 45px;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.score-number {
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.score-label {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+}
+
+.hero-score h2 {
+    font-size: 28px;
+    margin: 0 0 12px;
+}
+
+.hero-score p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    color: #d8e0e8;
+}
+
+.score-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.score-card {
+    background: white;
+    border: 1px solid #e3e8ee;
+    border-radius: 6px;
+    padding: 26px;
+}
+
+.score-card .label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #637282;
+    margin-bottom: 12px;
+}
+
+.score-card .value {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #e3e8ee;
+    border-radius: 6px;
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+.panel h2 {
+    margin: 0 0 14px;
+    font-size: 25px;
+}
+
+.panel h3 {
+    margin: 24px 0 8px;
+    font-size: 18px;
+}
+
+.panel p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: #4f6070;
+}
+
+.alert {
+    border-left: 5px solid #111c2c;
+}
+
+.actions ul {
+    margin: 15px 0 0 20px;
+    padding: 0;
+}
+
+.actions li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 24px;
+    background: #111c2c;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.secondary {
+    background: white;
+    color: #111c2c;
+    border: 1px solid #111c2c;
+}
+
+@media (max-width: 800px) {
+
+    .hero-score {
+        grid-template-columns: 1fr;
+    }
+
+    .score-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tagline {
+        display: none;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+<strong>SERVITISATION</strong>&nbsp;&nbsp; ALIGN
+</div>
+
+<div class="tagline">
+Leadership Alignment for Service Growth
+</div>
+
+</header>
+
+<main>
+
+<div class="eyebrow">
+YOUR SERVITISATION ALIGNMENT RESULTS
+</div>
+
+<h1 id="pageTitle">
+Your ALIGN Results
+</h1>
+
+<p class="subtext" id="companyContext">
+A snapshot of your current leadership alignment behind servitisation.
+</p>
+
+
+<section class="hero-score">
+
+<div>
+
+<div class="score-number" id="overallScore">
+0
+</div>
+
+<div class="score-label">
+OVERALL ALIGNMENT
+</div>
+
+</div>
+
+<div>
+
+<h2 id="overallStatus">
+Calculating your position...
+</h2>
+
+<p id="overallInsight">
+Your diagnostic insight will appear here.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="score-grid">
+
+<div class="score-card">
+<div class="label">BELIEF</div>
+<div class="value" id="beliefScore">0</div>
+</div>
+
+<div class="score-card">
+<div class="label">UNDERSTANDING</div>
+<div class="value" id="understandingScore">0</div>
+</div>
+
+<div class="score-card">
+<div class="label">COMMITMENT</div>
+<div class="value" id="commitmentScore">0</div>
+</div>
+
+<div class="score-card">
+<div class="label">READINESS</div>
+<div class="value" id="readinessScore">0</div>
+</div>
+
+</section>
+
+
+<section class="panel alert">
+
+<h2 id="diagnosticTitle">
+Primary Diagnostic
+</h2>
+
+<p id="diagnosticText">
+We are analysing where your biggest alignment gap sits.
+</p>
+
+</section>
+
+
+<section class="panel">
+
+<h2>What this means</h2>
+
+<p id="meaningText"></p>
+
+<h3>Your biggest opportunity</h3>
+
+<p id="opportunityText"></p>
+
+</section>
+
+
+<section class="panel actions">
+
+<h2>Recommended next actions</h2>
+
+<ul id="actionList"></ul>
+
+</section>
+
+
+<section class="panel">
+
+<h2>Your stated concern</h2>
+
+<p id="barrierText">
+No additional concern was entered.
+</p>
+
+</section>
+
+
+<div class="footer-actions">
+
+<a href="assessment.html" class="button secondary">
+← Review Assessment
+</a>
+
+<a href="index.html" class="button">
+Return Home
+</a>
+
+</div>
+
+</main>
+
+
+<script>
+
+const results = JSON.parse(
+    localStorage.getItem("servitisationAlignResults")
+);
+
+const organisation = JSON.parse(
+    localStorage.getItem("alignOrganisation")
+);
+
+if (!results) {
+    window.location.href = "assessment.html";
+}
+
+document.getElementById("overallScore").textContent = results.overall;
+document.getElementById("beliefScore").textContent = results.belief;
+document.getElementById("understandingScore").textContent = results.understanding;
+document.getElementById("commitmentScore").textContent = results.commitment;
+document.getElementById("readinessScore").textContent = results.readiness;
+
+if (organisation && organisation.company) {
+    document.getElementById("pageTitle").textContent =
+        organisation.company + " ALIGN Results";
+
+    document.getElementById("companyContext").textContent =
+        "A snapshot of current leadership alignment behind servitisation at " +
+        organisation.company + ".";
+}
+
+let status = "";
+let insight = "";
+
+if (results.overall >= 80) {
+    status = "Strongly aligned";
+    insight =
+        "There is strong support for servitisation across the core dimensions. The priority is now to convert this alignment into disciplined execution and measurable growth.";
+}
+else if (results.overall >= 60) {
+    status = "Developing alignment";
+    insight =
+        "There is meaningful support for servitisation, but important gaps remain between strategic belief and the organisation's ability or willingness to act.";
+}
+else if (results.overall >= 40) {
+    status = "Alignment is fragmented";
+    insight =
+        "Servitisation has some support, but leadership confidence, understanding or readiness is inconsistent. Moving too quickly may create resistance or weak execution.";
+}
+else {
+    status = "Significant alignment required";
+    insight =
+        "The organisation does not yet have sufficient shared belief, commitment or readiness to support an accelerated servitisation agenda.";
+}
+
+document.getElementById("overallStatus").textContent = status;
+document.getElementById("overallInsight").textContent = insight;
+
+
+let lowestDimension = "belief";
+let lowestScore = results.belief;
+
+const dimensions = {
+    belief: results.belief,
+    understanding: results.understanding,
+    commitment: results.commitment,
+    readiness: results.readiness
+};
+
+for (const dimension in dimensions) {
+    if (dimensions[dimension] < lowestScore) {
+        lowestDimension = dimension;
+        lowestScore = dimensions[dimension];
+    }
+}
+
+
+let diagnosticTitle = "";
+let diagnosticText = "";
+let meaningText = "";
+let opportunityText = "";
+let actions = [];
+
+
+if (
+    results.belief >= 70 &&
+    results.commitment <= results.belief - 25
+) {
+
+    diagnosticTitle = "Polite Agreement Risk";
+
+    diagnosticText =
+        "Your responses suggest that belief in servitisation is materially stronger than commitment to act. This is a classic sign of leadership agreement that has not yet translated into investment, ownership or behavioural change.";
+
+    meaningText =
+        "The organisation may intellectually support servitisation while still treating it as secondary to the existing business model.";
+
+    opportunityText =
+        "Turn strategic support into explicit ownership, investment decisions and measurable functional commitments.";
+
+    actions = [
+        "Clarify the strategic role service is expected to play in future growth.",
+        "Identify what each leadership function must actively contribute.",
+        "Translate support into specific investment and resource decisions.",
+        "Establish executive sponsorship and clear accountability."
+    ];
+
+}
+else if (lowestDimension === "belief") {
+
+    diagnosticTitle = "Strategic Belief Gap";
+
+    diagnosticText =
+        "The largest constraint is belief in the value of servitisation. Leadership may not yet see service as sufficiently important to future growth.";
+
+    meaningText =
+        "Without a stronger strategic case, investment and organisational commitment are likely to remain limited.";
+
+    opportunityText =
+        "Build a compelling customer, competitive and financial case for why service should matter.";
+
+    actions = [
+        "Quantify the service growth opportunity.",
+        "Identify customer problems that additional services could solve.",
+        "Benchmark how service contributes to value creation in relevant markets.",
+        "Create a concise executive servitisation growth case."
+    ];
+
+}
+else if (lowestDimension === "understanding") {
+
+    diagnosticTitle = "Understanding Gap";
+
+    diagnosticText =
+        "Leadership may support the idea of service growth but lacks a sufficiently shared understanding of how servitisation creates customer and financial value.";
+
+    meaningText =
+        "Different leaders may currently be using the word servitisation while imagining very different strategies.";
+
+    opportunityText =
+        "Create a common leadership language and value model for servitisation.";
+
+    actions = [
+        "Define what servitisation means for this organisation.",
+        "Clarify the customer value proposition.",
+        "Explain how service creates revenue, margin, retention and differentiation.",
+        "Run a leadership alignment workshop."
+    ];
+
+}
+else if (lowestDimension === "commitment") {
+
+    diagnosticTitle = "Commitment Gap";
+
+    diagnosticText =
+        "Leadership understanding is stronger than the willingness to invest, sponsor and change behaviour.";
+
+    meaningText =
+        "The organisation may be discussing servitisation positively without making the decisions required to make it real.";
+
+    opportunityText =
+        "Move leadership from agreement to explicit commitments.";
+
+    actions = [
+        "Identify the investment decisions currently being avoided.",
+        "Agree functional ownership for service growth.",
+        "Establish executive sponsorship.",
+        "Create measurable 90-day leadership commitments."
+    ];
+
+}
+else {
+
+    diagnosticTitle = "Readiness Gap";
+
+    diagnosticText =
+        "The biggest constraint is organisational readiness. Leadership may believe in the opportunity, but the current operating model may not yet support accelerated service growth.";
+
+    meaningText =
+        "Attempting to scale before strengthening the foundations could undermine the credibility of the wider servitisation agenda.";
+
+    opportunityText =
+        "Strengthen operational professionalism and the capabilities required to execute.";
+
+    actions = [
+        "Identify the most important operational capability gaps.",
+        "Clarify roles and ownership across service, sales and operations.",
+        "Establish baseline service performance measures.",
+        "Prioritise the capabilities that must be fixed before scaling."
+    ];
+
+}
+
+document.getElementById("diagnosticTitle").textContent =
+    diagnosticTitle;
+
+document.getElementById("diagnosticText").textContent =
+    diagnosticText;
+
+document.getElementById("meaningText").textContent =
+    meaningText;
+
+document.getElementById("opportunityText").textContent =
+    opportunityText;
+
+
+const actionList = document.getElementById("actionList");
+
+actions.forEach(function(action) {
+
+    const li = document.createElement("li");
+    li.textContent = action;
+    actionList.appendChild(li);
+
+});
+
+
+if (results.barrier && results.barrier.trim() !== "") {
+
+    document.getElementById("barrierText").textContent =
+        results.barrier;
+
+}
+
+</script>
+
+</body>
+</html>

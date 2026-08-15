@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leadership Assessment | Servitisation ALIGN</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #172231;
+}
+
+header {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 28px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.brand strong {
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 15px;
+}
+
+main {
+    max-width: 900px;
+    margin: 65px auto;
+    padding: 0 30px 100px;
+}
+
+.step {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 44px;
+    line-height: 1.1;
+    margin: 0 0 20px;
+}
+
+.intro {
+    font-size: 19px;
+    line-height: 1.6;
+    color: #536273;
+    max-width: 760px;
+    margin-bottom: 45px;
+}
+
+.scale-guide {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.question {
+    padding: 30px 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.question:last-of-type {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dimension {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.question-text {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.45;
+    margin-bottom: 22px;
+}
+
+.rating {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.rating label {
+    border: 1px solid #cfd5dc;
+    border-radius: 4px;
+    padding: 16px 8px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating input:checked + span {
+    background: #111c2c;
+    color: white;
+}
+
+.rating span {
+    display: block;
+    padding: 8px 0;
+    border-radius: 3px;
+}
+
+.rating label:hover {
+    border-color: #172231;
+}
+
+.final-question {
+    margin-top: 40px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 16px;
+    border: 1px solid #cfd5dc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: vertical;
+}
+
+.actions {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back {
+    color: #536273;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+button {
+    padding: 18px 30px;
+    background: #111c2c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #263548;
+}
+
+@media (max-width: 700px) {
+
+    .tagline {
+        display: none;
+    }
+
+    main {
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .rating {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 6px;
+    }
+
+    .rating label {
+        padding: 10px 4px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+<strong>SERVITISATION</strong>&nbsp;&nbsp; ALIGN
+</div>
+
+<div class="tagline">
+Leadership Alignment for Service Growth
+</div>
+
+</header>
+
+<main>
+
+<div class="step">
+STEP 3 OF 3 · LEADERSHIP ASSESSMENT
+</div>
+
+<h1>
+How aligned are you behind servitisation?
+</h1>
+
+<p class="intro">
+Rate each statement from 1 to 5. Your responses will help us understand
+your level of belief, understanding, commitment and readiness.
+</p>
+
+<div class="scale-guide">
+<span>1 = Strongly disagree</span>
+<span>5 = Strongly agree</span>
+</div>
+
+<form id="assessmentForm">
+
+<div class="question">
+
+<div class="dimension">BELIEF</div>
+
+<div class="question-text">
+1. Growing service should be an important part of our organisation's future growth strategy.
+</div>
+
+<div class="rating">
+
+<label>
+<input type="radio" name="q1" value="1" required>
+<span>1</span>
+</label>
+
+<label>
+<input type="radio" name="q1" value="2">
+<span>2</span>
+</label>
+
+<label>
+<input type="radio" name="q1" value="3">
+<span>3</span>
+</label>
+
+<label>
+<input type="radio" name="q1" value="4">
+<span>4</span>
+</label>
+
+<label>
+<input type="radio" name="q1" value="5">
+<span>5</span>
+</label>
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="dimension">BELIEF</div>
+
+<div class="question-text">
+2. Our customers would value additional services beyond those we currently provide.
+</div>
+
+<div class="rating">
+
+<label><input type="radio" name="q2" value="1" required><span>1</span></label>
+<label><input type="radio" name="q2" value="2"><span>2</span></label>
+<label><input type="radio" name="q2" value="3"><span>3</span></label>
+<label><input type="radio" name="q2" value="4"><span>4</span></label>
+<label><input type="radio" name="q2" value="5"><span>5</span></label>
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="dimension">UNDERSTANDING</div>
+
+<div class="question-text">
+3. Service can generate significant value independently of supporting product or equipment sales.
+</div>
+
+<div class="rating">
+
+<label><input type="radio" name="q3" value="1" required><span>1</span></label>
+<label><input type="radio" name="q3" value="2"><span>2</span></label>
+<label><input type="radio" name="q3" value="3"><span>3</span></label>
+<label><input type="radio" name="q3" value="4"><span>4</span></label>
+<label><input type="radio" name="q3" value="5"><span>5</span></label>
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="dimension">UNDERSTANDING</div>
+
+<div class="question-text">
+4. I understand how increased service revenue could improve the financial performance of our business.
+</div>
+
+<div class="rating">
+
+<label><input type="radio" name="q4" value="1" required><span>1</span></label>
+<label><input type="radio" name="q4" value="2"><span>2</span></label>
+<label><input type="radio" name="q4" value="3"><span>3</span></label>
+<label><input type="radio" name="q4" value="4"><span>4</span></label>
+<label><input type="radio" name="q4" value="5"><span>5</span></label>
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="dimension">COMMITMENT</div>
+
+<div class="question-text">
+5. I would support additional investment in service if a credible commercial case demonstrated an attractive return.
+</div>
+
+<div class="rating">
+
+<label><input type="radio" name="q5" value="1" required><span>1</span></label>
+<label><input type="radio" name="q5" value="2"><span>2</span></label>
+<label><input type="radio" name="q5" value="3"><span>3</span></label>
+<label><input type="radio" name="q5" value="4"><span>4</span></label>
+<label><input type="radio" name="q5" value="5"><span>5</span></label>
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="dimension">COMMITMENT</div>
+
+<div class="question-text">
+6. I am prepared to actively contribute to making servitisation successful within my area of responsibility.
+</div>
+
+<div class="rating">
+
+<label><input type="radio" name="q6" value="1" required><span>1</span></label>
+<label><input type="radio" name="q6" value="2"><span>2</span></label>
+<label><input type="radio" name="q6" value="3"><span>3</span></label>
+<label><input type="radio" name="q6" value="4"><span>4</span></label>
+<label><input type="radio" name="q6" value="5"><span>5</span></label>
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="dimension">READINESS</div>
+
+<div class="question-text">
+7. Our current service organisation operates at a sufficiently professional level to support further growth.
+</div>
+
+<div class="rating">
+
+<label><input type="radio" name="q7" value="1" required><span>1</span></label>
+<label><input type="radio" name="q7" value="2"><span>2</span></label>
+<label><input type="radio" name="q7" value="3"><span>3</span></label>
+<label><input type="radio" name="q7" value="4"><span>4</span></label>
+<label><input type="radio" name="q7" value="5"><span>5</span></label>
+
+</div>
+
+</div>
+
+
+<div class="question">
+
+<div class="dimension">READINESS</div>
+
+<div class="question-text">
+8. Our organisation has the processes, capabilities and leadership support required to scale service successfully.
+</div>
+
+<div class="rating">
+
+<label><input type="radio" name="q8" value="1" required><span>1</span></label>
+<label><input type="radio" name="q8" value="2"><span>2</span></label>
+<label><input type="radio" name="q8" value="3"><span>3</span></label>
+<label><input type="radio" name="q8" value="4"><span>4</span></label>
+<label><input type="radio" name="q8" value="5"><span>5</span></label>
+
+</div>
+
+</div>
+
+
+<div class="final-question">
+
+<div class="dimension">YOUR PERSPECTIVE</div>
+
+<div class="question-text">
+What is the single biggest reason the organisation should not invest more aggressively in servitisation today?
+</div>
+
+<textarea id="barrier" placeholder="Tell us the biggest concern, barrier or reason for caution..."></textarea>
+
+</div>
+
+
+<div class="actions">
+
+<a href="context.html" class="back">
+← Back
+</a>
+
+<button type="submit">
+View My ALIGN Results →
+</button>
+
+</div>
+
+</form>
+
+</main>
+
+<script>
+
+document.getElementById("assessmentForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const answers = {};
+
+    for (let i = 1; i <= 8; i++) {
+        answers["q" + i] = Number(
+            document.querySelector('input[name="q' + i + '"]:checked').value
+        );
+    }
+
+    answers.barrier = document.getElementById("barrier").value;
+
+    const belief =
+        ((answers.q1 + answers.q2) / 2 - 1) * 25;
+
+    const understanding =
+        ((answers.q3 + answers.q4) / 2 - 1) * 25;
+
+    const commitment =
+        ((answers.q5 + answers.q6) / 2 - 1) * 25;
+
+    const readiness =
+        ((answers.q7 + answers.q8) / 2 - 1) * 25;
+
+    const overall =
+        Math.round(
+            (belief + understanding + commitment + readiness) / 4
+        );
+
+    const results = {
+        belief: Math.round(belief),
+        understanding: Math.round(understanding),
+        commitment: Math.round(commitment),
+        readiness: Math.round(readiness),
+        overall: overall,
+        barrier: answers.barrier
+    };
+
+    localStorage.setItem(
+        "servitisationAlignResults",
+        JSON.stringify(results)
+    );
+
+    window.location.href = "dashboard.html";
+
+});
+
+</script>
+
+</body>
+</html>
