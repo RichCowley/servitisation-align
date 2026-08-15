@@ -567,7 +567,8 @@ if (alignmentGap >= 40 && alignmentDirection >= 20 && !(results.belief >= 70 && 
 }
 else if (
     results.belief >= 70 &&
-    results.commitment <= results.belief - 25
+    results.commitment <= results.belief - 25 &&
+    results.readiness <= results.belief - 25
 ) {
 
     diagnosticTitle = "Polite Agreement Risk";
