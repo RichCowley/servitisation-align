@@ -532,6 +532,18 @@ else if (alignmentDirection <= -20) {
         profileInterpretationTitle = "Alignment strengthens toward execution";
             profileInterpretationText = "Your ALIGN profile strengthens as it moves toward organisational readiness. This suggests that execution capability and commitment are stronger than the initial level of strategic belief might indicate.";}
         
+else if (
+    results.belief >= 80 &&
+    results.understanding >= 80 &&
+    results.commitment >= 80 &&
+    results.readiness >= 80
+) {
+    profileInterpretationTitle = "A strongly aligned leadership profile";
+
+    profileInterpretationText =
+        "Your four ALIGN dimensions are consistently strong. " +
+        "This indicates that strategic belief, shared understanding, leadership commitment and organisational readiness are strongly aligned to support service growth.";
+}
 else {
     profileInterpretationTitle = "A relatively aligned leadership profile";
 
