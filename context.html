@@ -370,6 +370,29 @@ Which function do you primarily represent?
 
 </div>
     
+ <div class="form-group">
+
+<label>
+Which geography do you primarily represent?
+<span class="help">This helps distinguish global, regional and country perspectives on the organisation's service strategy.</span>
+</label>
+
+<select id="respondentGeography" required>
+<option value="">Select your geography</option>
+<option>Global / Group</option>
+<option>Europe</option>
+<option>North America</option>
+<option>Latin America</option>
+<option>Middle East</option>
+<option>Africa</option>
+<option>Asia Pacific</option>
+<option>Individual country</option>
+<option>Multiple regions</option>
+<option>Other</option>
+</select>
+
+</div>
+    
     <div class="form-group">
 
 <label>
@@ -415,6 +438,7 @@ document.getElementById("contextForm").addEventListener("submit", function(event
         serviceMeaning: document.getElementById("serviceMeaning").value,
         respondentRole: document.getElementById("respondentRole").value,
         respondentFunction: document.getElementById("respondentFunction").value,
+        respondentGeography: document.getElementById("respondentGeography").value,
         leadershipSize: document.getElementById("leadershipSize").value
     };
 
