@@ -350,8 +350,62 @@ What do you believe customers value most from your service organisation?
 </select>
 
 </div>
-    
+
     <div class="form-group">
+
+<label>
+How quickly are customer expectations for service changing in your market?
+<span class="help">Consider expectations around speed, convenience, digital access, outcomes, personalisation and support.</span>
+</label>
+
+<select id="customerExpectationChange" required>
+<option value="">Select the rate of change</option>
+<option>Very rapidly — expectations are changing faster than we can currently respond</option>
+<option>Rapidly — significant changes are happening each year</option>
+<option>Moderately — expectations are evolving but remain manageable</option>
+<option>Slowly — customer expectations are relatively stable</option>
+<option>Very little change — expectations are largely unchanged</option>
+<option>We do not have enough customer insight to know</option>
+</select>
+
+</div>
+    <div class="form-group">
+
+<label>
+How well does your organisation currently understand what customers expect from its services?
+<span class="help">Consider how strong your customer insight is across needs, expectations, priorities and desired outcomes.</span>
+</label>
+
+<select id="customerInsightStrength" required>
+<option value="">Select level of customer insight</option>
+<option>Very strong – we have clear, current and evidence-based customer insight</option>
+<option>Strong – we understand our customers well, with some gaps</option>
+<option>Moderate – we have useful insight but it is fragmented or inconsistent</option>
+<option>Limited – much of our understanding is based on assumptions or informal feedback</option>
+<option>Very limited – we have little reliable insight into customer expectations</option>
+<option>Varies significantly across customers, markets or business units</option>
+</select>
+
+</div>
+    <div class="form-group">
+
+
+<label>
+How consistently does your organisation use customer insight when making service decisions?
+<span class="help">Consider whether customer evidence influences service design, investment priorities and operational decisions.</span>
+</label>
+
+<select id="customerInsightUse" required>
+<option value="">Select level of customer insight use</option>
+<option>Consistently – customer insight directly informs major service decisions</option>
+<option>Frequently – customer insight influences most service decisions</option>
+<option>Sometimes – customer insight is used, but not consistently</option>
+<option>Rarely – decisions are mainly driven by internal priorities or assumptions</option>
+<option>Very rarely – customer insight has little influence on service decisions</option>
+<option>Varies significantly across the organisation</option>
+</select>
+
+</div>
 <label>
 Who is completing this assessment?
 <span class="help">This helps us understand whose perspective is represented in the results.</span>
@@ -459,6 +513,9 @@ document.getElementById("contextForm").addEventListener("submit", function(event
         leadershipAlignment: document.getElementById("leadershipAlignment").value,
         serviceTimeHorizon: document.getElementById("serviceTimeHorizon").value,
         customerValuePriority: document.getElementById("customerValuePriority").value,
+        customerExpectationChange: document.getElementById("customerExpectationChange").value,
+        customerInsightStrength: document.getElementById("customerInsightStrength").value,
+        customerInsightUse: document.getElementById("customerInsightUse").value,
         serviceMeaning: document.getElementById("serviceMeaning").value,
         respondentRole: document.getElementById("respondentRole").value,
         respondentFunction: document.getElementById("respondentFunction").value,
