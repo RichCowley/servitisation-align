@@ -329,6 +329,23 @@ What does servitisation mean to your organisation today?
 
 </div>
 <div class="form-group">
+    <label>
+        How clearly does your organisation understand how services create commercial value?
+        <span class="help">Consider how services generate revenue, margin, customer retention, recurring income, product pull-through or wider strategic value.</span>
+    </label>
+
+    <select id="serviceCommercialClarity" required>
+        <option value="">Select level of commercial clarity</option>
+        <option>Very clear – we understand how services create and capture value and can demonstrate the economics</option>
+        <option>Clear – the commercial model is broadly understood, although some areas need further development</option>
+        <option>Partially clear – we understand some sources of value but the overall commercial model is not yet clear</option>
+        <option>Limited – services are strategically important but their commercial contribution is poorly understood</option>
+        <option>Very limited – we do not have a clear view of how services create or capture commercial value</option>
+        <option>Varies significantly across services, markets or business units</option>
+    </select>
+</div>
+    
+    <div class="form-group">
 
 <label>
 What do you believe customers value most from your service organisation?
@@ -405,6 +422,30 @@ How consistently does your organisation use customer insight when making service
 <option>Varies significantly across the organisation</option>
 </select>
 
+</div>
+    <div class="form-group">
+    <label>
+        What is currently the biggest barrier to advancing your organisation's service strategy?
+        <span class="help">Choose the single factor you believe is most constraining progress today.</span>
+    </label>
+
+    <select id="strategicBarrier" required>
+        <option value="">Select the biggest barrier</option>
+        <option>Lack of clear service strategy or direction</option>
+        <option>Leadership alignment or commitment</option>
+        <option>Organisational structure, silos or ownership</option>
+        <option>Skills, capabilities or resources</option>
+        <option>Technology, systems or data</option>
+        <option>Understanding customer needs and value</option>
+        <option>Commercial model, pricing or profitability</option>
+        <option>Sales capability or go-to-market approach</option>
+        <option>Operational delivery capability</option>
+        <option>Culture or resistance to change</option>
+        <option>Investment capacity or competing priorities</option>
+        <option>Legacy products, processes or infrastructure</option>
+        <option>External market, partner or regulatory constraints</option>
+        <option>No single barrier – several factors are equally significant</option>
+    </select>
 </div>
 <label>
 Who is completing this assessment?
@@ -512,10 +553,12 @@ document.getElementById("contextForm").addEventListener("submit", function(event
         serviceChangeDriver: document.getElementById("serviceChangeDriver").value,
         leadershipAlignment: document.getElementById("leadershipAlignment").value,
         serviceTimeHorizon: document.getElementById("serviceTimeHorizon").value,
+        serviceCommercialClarity: document.getElementById("serviceCommercialClarity").value,
         customerValuePriority: document.getElementById("customerValuePriority").value,
         customerExpectationChange: document.getElementById("customerExpectationChange").value,
         customerInsightStrength: document.getElementById("customerInsightStrength").value,
         customerInsightUse: document.getElementById("customerInsightUse").value,
+        strategicBarrier: document.getElementById("strategicBarrier").value,
         serviceMeaning: document.getElementById("serviceMeaning").value,
         respondentRole: document.getElementById("respondentRole").value,
         respondentFunction: document.getElementById("respondentFunction").value,
