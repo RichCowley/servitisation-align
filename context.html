@@ -216,6 +216,17 @@ Servitisation ambition
 </div>
 
 
+
+    <div class="form-group">
+
+<label>
+What does servitisation mean to your organisation today?
+<span class="help">Describe, in your own words, the role you believe service currently plays in the organisation.</span>
+</label>
+
+<textarea id="serviceMeaning" rows="4" required placeholder="For example: revenue growth, customer support, operational efficiency, differentiation, product support, customer retention..."></textarea>
+
+</div>
 <div class="form-group">
 
 <label>
@@ -253,6 +264,7 @@ document.getElementById("contextForm").addEventListener("submit", function(event
     const context = {
         serviceRevenue: document.getElementById("serviceRevenue").value,
         ambition: document.getElementById("ambition").value,
+        serviceMeaning: document.getElementById("serviceMeaning").value,
         leadershipSize: document.getElementById("leadershipSize").value
     };
 
