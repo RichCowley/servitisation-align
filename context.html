@@ -228,6 +228,23 @@ What does servitisation mean to your organisation today?
 
 </div>
 <div class="form-group">
+<label>
+Who is completing this assessment?
+<span class="help">This helps us understand whose perspective is represented in the results.</span>
+</label>
+
+<select id="respondentRole" required>
+<option value="">Select your role</option>
+<option>CEO / Managing Director</option>
+<option>Executive Leadership Team</option>
+<option>Senior Leader / Director</option>
+<option>Functional Leader</option>
+<option>Regional / Country Leader</option>
+<option>Other</option>
+</select>
+</div>
+    
+    <div class="form-group">
 
 <label>
 Leadership team size
@@ -265,6 +282,7 @@ document.getElementById("contextForm").addEventListener("submit", function(event
         serviceRevenue: document.getElementById("serviceRevenue").value,
         ambition: document.getElementById("ambition").value,
         serviceMeaning: document.getElementById("serviceMeaning").value,
+        respondentRole: document.getElementById("respondentRole").value,
         leadershipSize: document.getElementById("leadershipSize").value
     };
 
