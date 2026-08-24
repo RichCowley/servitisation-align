@@ -289,6 +289,31 @@ Who is completing this assessment?
 </select>
 </div>
     
+ <div class="form-group">
+
+<label>
+Which function do you primarily represent?
+<span class="help">This helps identify where different perspectives on servitisation sit across the leadership team.</span>
+</label>
+
+<select id="respondentFunction" required>
+<option value="">Select your function</option>
+<option>General Management / Executive</option>
+<option>Sales</option>
+<option>Marketing</option>
+<option>Service / Aftermarket</option>
+<option>Operations</option>
+<option>Finance</option>
+<option>Technology / Digital / IT</option>
+<option>Product / Engineering / R&amp;D</option>
+<option>Customer Experience / Customer Success</option>
+<option>HR / People</option>
+<option>Strategy / Transformation</option>
+<option>Other</option>
+</select>
+
+</div>
+    
     <div class="form-group">
 
 <label>
@@ -330,6 +355,7 @@ document.getElementById("contextForm").addEventListener("submit", function(event
         desiredServiceObjective: document.getElementById("desiredServiceObjective").value,
         serviceMeaning: document.getElementById("serviceMeaning").value,
         respondentRole: document.getElementById("respondentRole").value,
+        respondentFunction: document.getElementById("respondentFunction").value,
         leadershipSize: document.getElementById("leadershipSize").value
     };
 
