@@ -464,7 +464,8 @@ document.getElementById("assessmentForm").addEventListener("submit", function(ev
 
     event.preventDefault();
 
-    const answers = {};
+    const context = JSON.parse(localStorage.getItem("servitisationAlignContext") || "{}");
+const answers = {};
 
     for (let i = 1; i <= 8; i++) {
         answers["q" + i] = Number(
@@ -497,7 +498,8 @@ document.getElementById("assessmentForm").addEventListener("submit", function(ev
         commitment: Math.round(commitment),
         readiness: Math.round(readiness),
         overall: overall,
-        barrier: answers.barrier
+        barrier: answers.barrier,
+context: context
     };
 
     localStorage.setItem(
