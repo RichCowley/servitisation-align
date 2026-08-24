@@ -240,6 +240,28 @@ What is the primary objective of your organisation's service agenda today?
 
 </div> 
     
+<div class="form-group">
+
+<label>
+What should the primary objective of your organisation's service agenda be?
+<span class="help">Choose the outcome you believe should become the organisation's main service priority.</span>
+</label>
+
+<select id="desiredServiceObjective" required>
+<option value="">Select desired primary objective</option>
+<option>Generate service revenue and growth</option>
+<option>Improve customer experience and satisfaction</option>
+<option>Increase customer retention and loyalty</option>
+<option>Improve operational efficiency and reduce cost</option>
+<option>Differentiate from competitors</option>
+<option>Strengthen product sales through service</option>
+<option>Build long-term customer partnerships</option>
+<option>Develop new service-based business models</option>
+<option>Respond faster and improve service capability</option>
+</select>
+
+</div>
+    
     <div class="form-group">
 
 <label>
@@ -305,6 +327,7 @@ document.getElementById("contextForm").addEventListener("submit", function(event
         serviceRevenue: document.getElementById("serviceRevenue").value,
         ambition: document.getElementById("ambition").value,
         currentServiceObjective: document.getElementById("currentServiceObjective").value,
+        desiredServiceObjective: document.getElementById("desiredServiceObjective").value,
         serviceMeaning: document.getElementById("serviceMeaning").value,
         respondentRole: document.getElementById("respondentRole").value,
         leadershipSize: document.getElementById("leadershipSize").value
