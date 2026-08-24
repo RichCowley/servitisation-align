@@ -304,6 +304,23 @@ How aligned is your leadership team on the organisation's service strategy?
     <div class="form-group">
 
 <label>
+Over what timeframe does the organisation expect to make meaningful progress on its service strategy?
+<span class="help">Choose the timeframe that best reflects the organisation's current expectations.</span>
+</label>
+
+<select id="serviceTimeHorizon" required>
+<option value="">Select expected timeframe</option>
+<option>Immediate — within the next 3 months</option>
+<option>Near term — within 3–6 months</option>
+<option>Medium term — within 6–12 months</option>
+<option>Longer term — within 1–3 years</option>
+<option>Exploratory — no defined timeframe yet</option>
+</select>
+
+</div>
+    <div class="form-group">
+
+<label>
 What does servitisation mean to your organisation today?
 <span class="help">Describe, in your own words, the role you believe service currently plays in the organisation.</span>
 </label>
@@ -394,6 +411,7 @@ document.getElementById("contextForm").addEventListener("submit", function(event
         desiredServiceObjective: document.getElementById("desiredServiceObjective").value,
         serviceChangeDriver: document.getElementById("serviceChangeDriver").value,
         leadershipAlignment: document.getElementById("leadershipAlignment").value,
+        serviceTimeHorizon: document.getElementById("serviceTimeHorizon").value,
         serviceMeaning: document.getElementById("serviceMeaning").value,
         respondentRole: document.getElementById("respondentRole").value,
         respondentFunction: document.getElementById("respondentFunction").value,
