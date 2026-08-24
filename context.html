@@ -329,6 +329,29 @@ What does servitisation mean to your organisation today?
 
 </div>
 <div class="form-group">
+
+<label>
+What do you believe customers value most from your service organisation?
+<span class="help">Choose the single outcome you believe matters most to customers today.</span>
+</label>
+
+<select id="customerValuePriority" required>
+<option value="">Select the primary customer value</option>
+<option>Fast response and availability</option>
+<option>Technical expertise and problem resolution</option>
+<option>Reliability and uptime</option>
+<option>Lower total cost of ownership</option>
+<option>Ease of doing business</option>
+<option>Proactive support and prevention</option>
+<option>Business outcomes and performance</option>
+<option>Long-term partnership and trusted advice</option>
+<option>Innovation and new capabilities</option>
+<option>Customers value different things — there is no clear priority</option>
+</select>
+
+</div>
+    
+    <div class="form-group">
 <label>
 Who is completing this assessment?
 <span class="help">This helps us understand whose perspective is represented in the results.</span>
@@ -435,6 +458,7 @@ document.getElementById("contextForm").addEventListener("submit", function(event
         serviceChangeDriver: document.getElementById("serviceChangeDriver").value,
         leadershipAlignment: document.getElementById("leadershipAlignment").value,
         serviceTimeHorizon: document.getElementById("serviceTimeHorizon").value,
+        customerValuePriority: document.getElementById("customerValuePriority").value,
         serviceMeaning: document.getElementById("serviceMeaning").value,
         respondentRole: document.getElementById("respondentRole").value,
         respondentFunction: document.getElementById("respondentFunction").value,
