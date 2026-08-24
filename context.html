@@ -262,6 +262,45 @@ What should the primary objective of your organisation's service agenda be?
 
 </div>
     
+<div class="form-group">
+
+<label>
+What is the main driver for increasing your organisation's focus on services?
+<span class="help">Choose the factor creating the strongest need for change.</span>
+</label>
+
+<select id="serviceChangeDriver" required>
+<option value="">Select primary driver</option>
+<option>Pressure to grow revenue</option>
+<option>Declining margins in the core product business</option>
+<option>Changing customer expectations</option>
+<option>Competitive pressure</option>
+<option>Need for more predictable recurring revenue</option>
+<option>Need to strengthen customer relationships</option>
+<option>Digital or technology opportunities</option>
+<option>Pressure to improve operational efficiency</option>
+<option>Strategic shift towards services</option>
+<option>No single clear driver</option>
+</select>
+
+</div>
+    <div class="form-group">
+
+<label>
+How aligned is your leadership team on the organisation's service strategy?
+<span class="help">Choose the option that best reflects the level of agreement across senior leaders today.</span>
+</label>
+
+<select id="leadershipAlignment" required>
+<option value="">Select level of alignment</option>
+<option>Strongly aligned — there is a shared view of the direction</option>
+<option>Mostly aligned — some differences exist but the direction is broadly shared</option>
+<option>Partially aligned — there are significant differences in priorities or approach</option>
+<option>Poorly aligned — leaders have substantially different views</option>
+<option>There is currently no clear shared service strategy</option>
+</select>
+
+</div>
     <div class="form-group">
 
 <label>
@@ -353,6 +392,8 @@ document.getElementById("contextForm").addEventListener("submit", function(event
         ambition: document.getElementById("ambition").value,
         currentServiceObjective: document.getElementById("currentServiceObjective").value,
         desiredServiceObjective: document.getElementById("desiredServiceObjective").value,
+        serviceChangeDriver: document.getElementById("serviceChangeDriver").value,
+        leadershipAlignment: document.getElementById("leadershipAlignment").value,
         serviceMeaning: document.getElementById("serviceMeaning").value,
         respondentRole: document.getElementById("respondentRole").value,
         respondentFunction: document.getElementById("respondentFunction").value,
