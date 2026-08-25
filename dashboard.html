@@ -401,7 +401,11 @@ We are analysing where your biggest alignment gap sits.
 
 <section class="panel actions">
 
-<h2>Recommended next actions</h2>
+<h2>Your 90-Day Leadership Agenda</h2>
+
+<p class="section-intro">
+    Based on your ALIGN profile and strategic context, these are the priorities leadership should address next.
+</p>
 
 <ul id="actionList"></ul>
 
@@ -822,6 +826,55 @@ document.getElementById("meaningText").textContent =
 document.getElementById("opportunityText").textContent =
     opportunityText;
 
+    // Refine the 90-day agenda using strategic context
+
+if (
+    context.strategicBarrier &&
+    context.strategicBarrier.toLowerCase().includes("lack of clear service strategy")
+) {
+    actions.unshift(
+        "Within 30 days, align the leadership team around one clear service strategy, including the priority customer outcomes, commercial objectives and ownership."
+    );
+}
+
+if (
+    context.currentServiceObjective &&
+    context.desiredServiceObjective &&
+    context.currentServiceObjective !== context.desiredServiceObjective
+) {
+    actions.push(
+        "Within 60 days, agree the transition from the organisation's current service objective to the desired strategic priority, with clear measures of success."
+    );
+}
+
+if (
+    context.customerInsightUse &&
+    (
+        context.customerInsightUse.startsWith("Rarely") ||
+        context.customerInsightUse.startsWith("Very rarely") ||
+        context.customerInsightUse.startsWith("Sometimes")
+    )
+) {
+    actions.push(
+        "Establish a regular customer-insight review so customer evidence directly informs service design, investment priorities and operational decisions."
+    );
+}
+
+if (
+    context.serviceCommercialClarity &&
+    (
+        context.serviceCommercialClarity.startsWith("Limited") ||
+        context.serviceCommercialClarity.startsWith("Very limited") ||
+        context.serviceCommercialClarity.startsWith("Partially clear")
+    )
+) {
+    actions.push(
+        "Build a simple commercial value model showing how services contribute to revenue, margin, retention, recurring income and strategic differentiation."
+    );
+}
+
+// Keep the agenda focused on the most important priorities
+actions = [...new Set(actions)].slice(0, 5);
 
 const actionList = document.getElementById("actionList");
 
