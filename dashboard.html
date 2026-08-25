@@ -376,7 +376,15 @@ We are analysing where your biggest alignment gap sits.
 </p>
 
 </section>
+<section class="panel">
+    <h2>Strategic Context</h2>
+    <p>
+        Your ALIGN result has been interpreted against the commercial,
+        customer and organisational context provided by your leadership team.
+    </p>
 
+    <div id="strategicContextSummary"></div>
+</section>
 
 <section class="panel">
 
@@ -423,6 +431,7 @@ Start New Assessment
 const results = JSON.parse(
     localStorage.getItem("servitisationAlignResults")
 );
+    const context = results?.context || {};
 
 const organisation = JSON.parse(
     localStorage.getItem("alignOrganisation")
@@ -431,7 +440,20 @@ const organisation = JSON.parse(
 if (!results) {
     window.location.href = "assessment.html";
 }
+const strategicContextItems = [
+    context.serviceCommercialClarity,
+    context.customerValuePriority,
+    context.customerExpectationChange,
+    context.customerInsightStrength,
+    context.customerInsightUse,
+    context.strategicBarrier
+].filter(Boolean);
 
+document.getElementById("strategicContextSummary").innerHTML =
+    strategicContextItems.length
+        ? "<ul>" + strategicContextItems.map(item => `<li>${item}</li>`).join("") + "</ul>"
+        : "<p>No strategic context was provided.</p>";
+    
 document.getElementById("overallScore").textContent = results.overall;
 document.getElementById("beliefScore").textContent = results.belief;
 document.getElementById("understandingScore").textContent = results.understanding;
