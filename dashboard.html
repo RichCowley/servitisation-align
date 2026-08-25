@@ -703,6 +703,51 @@ else {
     ];
 
 }
+
+    if (context.customerExpectationChange && context.customerInsightUse) {
+    if (
+        context.customerExpectationChange.includes("Rapidly") &&
+        (
+            context.customerInsightUse.includes("Sometimes") ||
+            context.customerInsightUse.includes("Rarely") ||
+            context.customerInsightUse.includes("Very rarely")
+        )
+    ) {
+        meaningText +=
+            " Customer expectations are changing quickly, but customer insight is not yet being used consistently in service decisions.";
+
+        actions.unshift(
+            "Create a regular customer insight process that directly informs service priorities."
+        );
+    }
+}
+
+if (context.serviceCommercialClarity) {
+    if (
+        context.serviceCommercialClarity.includes("Limited") ||
+        context.serviceCommercialClarity.includes("Very limited") ||
+        context.serviceCommercialClarity.includes("Partially clear")
+    ) {
+        opportunityText +=
+            " Strengthen the commercial logic for how services create revenue, margin, retention and strategic value.";
+    }
+}
+
+if (context.strategicBarrier) {
+    meaningText +=
+        " Leadership has identified " +
+        context.strategicBarrier.toLowerCase() +
+        " as a key barrier to progress.";
+}
+
+if (
+    context.currentServiceObjective &&
+    context.desiredServiceObjective &&
+    context.currentServiceObjective !== context.desiredServiceObjective
+) {
+    meaningText +=
+        " There is also a gap between today's primary service objective and the direction leadership believes the organisation should pursue.";
+}
 document.getElementById("profileInterpretationTitle").textContent = profileInterpretationTitle;
 document.getElementById("profileInterpretationText").textContent = profileInterpretationText;
 document.getElementById("diagnosticTitle").textContent =
