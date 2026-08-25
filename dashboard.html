@@ -440,20 +440,80 @@ const organisation = JSON.parse(
 if (!results) {
     window.location.href = "assessment.html";
 }
-const strategicContextItems = [
-    context.serviceCommercialClarity,
-    context.customerValuePriority,
-    context.customerExpectationChange,
-    context.customerInsightStrength,
-    context.customerInsightUse,
-    context.strategicBarrier
-].filter(Boolean);
+const strategicContextNarrative = [];
+
+if (context.serviceCommercialClarity) {
+    if (context.serviceCommercialClarity.startsWith("Very clear")) {
+        strategicContextNarrative.push(
+            "The organisation has a strong understanding of how services create and capture commercial value."
+        );
+    } else if (context.serviceCommercialClarity.startsWith("Clear")) {
+        strategicContextNarrative.push(
+            "The commercial model for services is broadly understood, although some areas still require further development."
+        );
+    } else if (context.serviceCommercialClarity.startsWith("Partially clear")) {
+        strategicContextNarrative.push(
+            "Leadership understands some sources of service value, but the overall commercial model is not yet consistently clear."
+        );
+    } else if (
+        context.serviceCommercialClarity.startsWith("Limited") ||
+        context.serviceCommercialClarity.startsWith("Very limited")
+    ) {
+        strategicContextNarrative.push(
+            "Services are strategically important, but their commercial contribution is not yet sufficiently understood."
+        );
+    }
+}
+
+if (context.customerValuePriority) {
+    strategicContextNarrative.push(
+        "Leadership believes customers currently place greatest value on " +
+        context.customerValuePriority.toLowerCase() +
+        "."
+    );
+}
+
+if (context.customerExpectationChange) {
+    if (
+        context.customerExpectationChange.startsWith("Very rapidly") ||
+        context.customerExpectationChange.startsWith("Rapidly")
+    ) {
+        strategicContextNarrative.push(
+            "Customer expectations are changing quickly, increasing the need for the service model to adapt."
+        );
+    } else if (context.customerExpectationChange.startsWith("Moderately")) {
+        strategicContextNarrative.push(
+            "Customer expectations are evolving at a manageable pace."
+        );
+    } else {
+        strategicContextNarrative.push(
+            "Customer expectations appear relatively stable."
+        );
+    }
+}
+
+if (context.customerInsightStrength && context.customerInsightUse) {
+    strategicContextNarrative.push(
+        "Customer insight is " +
+        context.customerInsightStrength.split("–")[0].trim().toLowerCase() +
+        " and is " +
+        context.customerInsightUse.split("–")[0].trim().toLowerCase() +
+        " used in service decision-making."
+    );
+}
+
+if (context.strategicBarrier) {
+    strategicContextNarrative.push(
+        "The principal barrier identified by leadership is " +
+        context.strategicBarrier.toLowerCase() +
+        "."
+    );
+}
 
 document.getElementById("strategicContextSummary").innerHTML =
-    strategicContextItems.length
-        ? "<ul>" + strategicContextItems.map(item => `<li>${item}</li>`).join("") + "</ul>"
+    strategicContextNarrative.length
+        ? "<p>" + strategicContextNarrative.join(" ") + "</p>"
         : "<p>No strategic context was provided.</p>";
-    
 document.getElementById("overallScore").textContent = results.overall;
 document.getElementById("beliefScore").textContent = results.belief;
 document.getElementById("understandingScore").textContent = results.understanding;
