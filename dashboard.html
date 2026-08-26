@@ -1122,7 +1122,71 @@ document.getElementById("leadershipPriorityTitle").textContent =
 
 document.getElementById("leadershipPriorityText").textContent =
     leadershipPriorityText;
-    
+
+let interventionTitle = "";
+let interventionIntro = "Bring the leadership team together to agree:";
+let intervention1 = "";
+let intervention2 = "";
+let intervention3 = "";
+let intervention4 = "";
+let interventionOutput = "";
+
+if (priorityLowestDimension === "belief") {
+
+    interventionTitle = "Run a Servitisation Strategic Case Workshop";
+
+    intervention1 = "the customer and market case for expanding services;";
+    intervention2 = "the commercial and strategic value services should create;";
+    intervention3 = "why servitisation matters to the organisation now;";
+    intervention4 = "the leadership case for investment and strategic commitment.";
+
+    interventionOutput =
+        "One agreed strategic case for servitisation and a clear leadership rationale for investment.";
+
+} else if (priorityLowestDimension === "understanding") {
+
+    interventionTitle = "Run a Service Strategy Alignment Workshop";
+
+    intervention1 = "the primary customer problem services should solve;";
+    intervention2 = "the commercial role of services;";
+    intervention3 = "the desired service business model;";
+    intervention4 = "the 3–5 decisions required to move from the current position to the desired position.";
+
+    interventionOutput =
+        "One agreed service strategy statement and a leadership-owned set of priorities.";
+
+} else if (priorityLowestDimension === "commitment") {
+
+    interventionTitle = "Run a Leadership Commitment & Decision Session";
+
+    intervention1 = "the strategic decisions leadership is prepared to make now;";
+    intervention2 = "the resources and investment required to support the service strategy;";
+    intervention3 = "clear executive ownership for the major service priorities;";
+    intervention4 = "the commitments that will move the organisation from intent to execution.";
+
+    interventionOutput =
+        "A documented set of leadership commitments, named owners and agreed investment priorities.";
+
+} else {
+
+    interventionTitle = "Run a Service Readiness & Execution Workshop";
+
+    intervention1 = "the operating capabilities required to execute the service strategy;";
+    intervention2 = "the ownership and governance needed to sustain delivery;";
+    intervention3 = "the capability, process and resource gaps that must be closed;";
+    intervention4 = "the immediate execution priorities for the next 90 days.";
+
+    interventionOutput =
+        "A prioritised readiness plan with clear owners, capability actions and execution milestones.";
+}
+
+document.getElementById("interventionTitle").textContent = interventionTitle;
+document.getElementById("interventionIntro").textContent = interventionIntro;
+document.getElementById("intervention1").textContent = intervention1;
+document.getElementById("intervention2").textContent = intervention2;
+document.getElementById("intervention3").textContent = intervention3;
+document.getElementById("intervention4").textContent = intervention4;
+document.getElementById("interventionOutput").textContent = interventionOutput;
 document.getElementById("profileInterpretationTitle").textContent = profileInterpretationTitle;
 document.getElementById("profileInterpretationText").textContent = profileInterpretationText;
 document.getElementById("diagnosticTitle").textContent =
