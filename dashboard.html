@@ -407,7 +407,25 @@ We are analysing where your biggest alignment gap sits.
     Based on your ALIGN profile and strategic context, these are the priorities leadership should address next.
 </p>
 
-<ul id="actionList"></ul>
+<div class="agenda-grid">
+    <div class="agenda-item">
+        <div class="agenda-period">0–30 DAYS</div>
+        <h3>Align</h3>
+        <p id="agenda30"></p>
+    </div>
+
+    <div class="agenda-item">
+        <div class="agenda-period">30–60 DAYS</div>
+        <h3>Define</h3>
+        <p id="agenda60"></p>
+    </div>
+
+    <div class="agenda-item">
+        <div class="agenda-period">60–90 DAYS</div>
+        <h3>Operationalise</h3>
+        <p id="agenda90"></p>
+    </div>
+</div>
 
 </section>
 
@@ -876,15 +894,62 @@ if (
 // Keep the agenda focused on the most important priorities
 actions = [...new Set(actions)].slice(0, 5);
 
-const actionList = document.getElementById("actionList");
+let agenda30 =
+    actions[0] ||
+    "Align the leadership team around the immediate priority for service growth.";
 
-actions.forEach(function(action) {
+let agenda60 =
+    actions[1] ||
+    "Translate the agreed direction into a clear customer and commercial value proposition.";
 
-    const li = document.createElement("li");
-    li.textContent = action;
-    actionList.appendChild(li);
+let agenda90 =
+    actions[2] ||
+    "Turn the agreed strategy into measurable actions, ownership and operating priorities.";
 
-});
+if (
+    context.strategicBarrier &&
+    context.strategicBarrier.toLowerCase().includes("lack of clear service strategy")
+) {
+    agenda30 =
+        "Align the leadership team around one clear service strategy, including priority customer outcomes, commercial objectives, ownership and the decisions that must be made now.";
+}
+
+if (
+    context.currentServiceObjective &&
+    context.desiredServiceObjective &&
+    context.currentServiceObjective !== context.desiredServiceObjective
+) {
+    agenda60 =
+        "Define the transition from today's service objective to the desired strategic priority. Agree the customer proposition, commercial logic and measures that will demonstrate progress.";
+}
+
+if (
+    context.customerInsightUse &&
+    (
+        context.customerInsightUse.startsWith("Rarely") ||
+        context.customerInsightUse.startsWith("Very rarely") ||
+        context.customerInsightUse.startsWith("Sometimes")
+    )
+) {
+    agenda90 =
+        "Operationalise the strategy by establishing a regular customer-insight review, clear ownership and measurable service priorities so customer evidence directly influences decisions.";
+}
+
+if (
+    context.serviceCommercialClarity &&
+    (
+        context.serviceCommercialClarity.startsWith("Limited") ||
+        context.serviceCommercialClarity.startsWith("Very limited") ||
+        context.serviceCommercialClarity.startsWith("Partially clear")
+    )
+) {
+    agenda60 =
+        "Define a clear commercial value model showing how services create revenue, margin, retention, recurring income and strategic differentiation, and connect this to the desired service direction.";
+}
+
+document.getElementById("agenda30").textContent = agenda30;
+document.getElementById("agenda60").textContent = agenda60;
+document.getElementById("agenda90").textContent = agenda90;
 
 
 if (results.barrier && results.barrier.trim() !== "") {
