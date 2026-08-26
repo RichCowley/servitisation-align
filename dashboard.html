@@ -335,6 +335,37 @@ h1 {
     color: #66758a;
     margin-bottom: 6px;
 }
+/* Decisions Required */
+
+.decisions .agenda-item {
+    background: #ffffff;
+    border: 1px solid #dfe5ec;
+    border-left: 4px solid #111c2c;
+    border-top: 1px solid #dfe5ec;
+    min-height: 220px;
+}
+
+.decisions .agenda-item::before {
+    display: none;
+}
+
+.agenda-number {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #66758a;
+    margin-bottom: 18px;
+}
+
+.decisions .agenda-item h3 {
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+.decisions .agenda-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
 </style>
 </head>
 
@@ -494,6 +525,40 @@ We are analysing where your biggest alignment gap sits.
 </section>
 
 
+<section class="panel decisions">
+
+    <div class="priority-label">DECISIONS REQUIRED</div>
+
+    <h2>The leadership decisions that now need to be made</h2>
+
+    <p class="section-intro">
+        Based on your ALIGN profile and strategic context, leadership should resolve these three questions.
+    </p>
+
+    <div class="agenda-grid">
+
+        <div class="agenda-item">
+            <div class="agenda-number">01</div>
+            <h3>Strategic direction</h3>
+            <p id="decision1">Which service-growth objective are we actually pursuing?</p>
+        </div>
+
+        <div class="agenda-item">
+            <div class="agenda-number">02</div>
+            <h3>Customer proposition</h3>
+            <p id="decision2">What customer problem will our service strategy solve better than today?</p>
+        </div>
+
+        <div class="agenda-item">
+            <div class="agenda-number">03</div>
+            <h3>Commercial model</h3>
+            <p id="decision3">How will the strategy create revenue, margin, retention or strategic differentiation?</p>
+        </div>
+
+    </div>
+
+</section>
+    
 <section class="panel actions">
 
 <h2>Your 90-Day Leadership Agenda</h2>
