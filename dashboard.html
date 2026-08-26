@@ -252,6 +252,78 @@ h1 {
     }
 }
 
+
+    /* 90-Day Leadership Roadmap */
+
+.agenda-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.agenda-item {
+    position: relative;
+    padding: 28px 26px 30px;
+    background: #f7f9fb;
+    border: 1px solid #dfe5ec;
+    border-top: 4px solid #111c2c;
+    border-radius: 6px;
+    min-height: 250px;
+}
+
+.agenda-period {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #66758a;
+    margin-bottom: 20px;
+}
+
+.agenda-item h3 {
+    margin: 0 0 18px;
+    font-size: 24px;
+    color: #111c2c;
+}
+
+.agenda-item p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #526277;
+}
+
+.agenda-item:nth-child(1)::before {
+    content: "01";
+}
+
+.agenda-item:nth-child(2)::before {
+    content: "02";
+}
+
+.agenda-item:nth-child(3)::before {
+    content: "03";
+}
+
+.agenda-item::before {
+    display: block;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 700;
+    color: #111c2c;
+    margin-bottom: 22px;
+}
+
+@media (max-width: 800px) {
+    .agenda-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .agenda-item {
+        min-height: auto;
+    }
+}
 </style>
 </head>
 
