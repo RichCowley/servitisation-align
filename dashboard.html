@@ -458,6 +458,18 @@ We are analysing where your biggest alignment gap sits.
     <div id="strategicContextSummary"></div>
 </section>
 
+<section class="panel leadership-priority">
+
+    <div class="priority-label">LEADERSHIP PRIORITY</div>
+
+    <h2 id="leadershipPriorityTitle">
+        Leadership Priority
+    </h2>
+
+    <p id="leadershipPriorityText"></p>
+
+</section>
+    
 <section class="panel">
 
 <h2>What this means</h2>
@@ -713,6 +725,8 @@ let diagnosticTitle = "";
 let diagnosticText = "";
 let meaningText = "";
 let opportunityText = "";
+let leadershipPriorityTitle = "";
+let leadershipPriorityText = "";
 let actions = [];
 if (alignmentGap >= 40 && alignmentDirection >= 20 && !(results.belief >= 70 && results.commitment <= results.belief - 25)) {
 
@@ -902,6 +916,72 @@ if (
     meaningText +=
         " There is also a gap between today's primary service objective and the direction leadership believes the organisation should pursue.";
 }
+
+const priorityScores = {
+    belief: results.belief,
+    understanding: results.understanding,
+    commitment: results.commitment,
+    readiness: results.readiness
+};
+
+const priorityValues = Object.values(priorityScores);
+const priorityLowestScore = Math.min(...priorityValues);
+const priorityHighestScore = Math.max(...priorityValues);
+const priorityGap = priorityHighestScore - priorityLowestScore;
+
+const priorityLowestDimension =
+    Object.keys(priorityScores).find(
+        key => priorityScores[key] === priorityLowestScore
+    );
+
+if (priorityGap <= 15) {
+
+    leadershipPriorityTitle =
+        "Raise the overall level of leadership alignment.";
+
+    leadershipPriorityText =
+        "The four ALIGN dimensions are relatively balanced. Leadership should now focus on strengthening the overall level of alignment and converting that consistency into measurable service-growth execution.";
+
+} else if (priorityLowestDimension === "belief") {
+
+    leadershipPriorityTitle =
+        "Strengthen the strategic case for servitisation.";
+
+    leadershipPriorityText =
+        "Belief is currently the weakest ALIGN dimension. Leadership should strengthen the customer, competitive and commercial case for why service growth matters before expecting wider organisational commitment.";
+
+} else if (priorityLowestDimension === "understanding") {
+
+    leadershipPriorityTitle =
+        "Turn strategic belief into shared commercial understanding.";
+
+    leadershipPriorityText =
+        "Understanding is currently the weakest ALIGN dimension. Leadership should create a common view of the customer proposition, commercial value model and strategic role of services before accelerating execution.";
+
+} else if (priorityLowestDimension === "commitment") {
+
+    leadershipPriorityTitle =
+        "Convert agreement into explicit leadership commitment.";
+
+    leadershipPriorityText =
+        "Commitment is currently the weakest ALIGN dimension. Leadership should move from positive intent to clear investment decisions, ownership and visible sponsorship of the service-growth agenda.";
+
+} else {
+
+    leadershipPriorityTitle =
+        "Build the organisational capability to execute.";
+
+    leadershipPriorityText =
+        "Readiness is currently the weakest ALIGN dimension. Leadership should strengthen the operating model, capabilities, ownership and resources required to turn strategic intent into repeatable execution.";
+
+}
+
+document.getElementById("leadershipPriorityTitle").textContent =
+    leadershipPriorityTitle;
+
+document.getElementById("leadershipPriorityText").textContent =
+    leadershipPriorityText;
+    
 document.getElementById("profileInterpretationTitle").textContent = profileInterpretationTitle;
 document.getElementById("profileInterpretationText").textContent = profileInterpretationText;
 document.getElementById("diagnosticTitle").textContent =
